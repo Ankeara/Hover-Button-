@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Buuton</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="text">រៀន​ 📖📚</h2>
+        <button class="btn btnno">ដេក</button>
+        <button class="btn btnyes">រៀន</button>
+        
+    </div>
+    
+    <script>
+        const btnAgree = document.querySelector('.btnyes');
+        const btnUnAgree = document.querySelector('.btnno');
+        const text = document.querySelector('.text');
+
+        btnUnAgree.addEventListener('click', () =>{
+            text.innerHTML = "កុំរៀនដេកវិញប្រូ😉👌";
+        })
+        btnAgree.addEventListener("mouseover", ()=>{
+            if(btnAgree.classList.contains("moving")){
+                btnAgree.classList.remove("moving");
+            }else{
+                btnAgree.classList.add("moving");
+            }
+        })
+
+    </script>
+</body>
+</html>
